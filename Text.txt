@@ -1,0 +1,5 @@
+Experienced QA Engineer with 3+ years of experience in manual and automation testing
+across web and mobile platforms. Strong expertise in building scalable Selenium-based
+frameworks, integrating tests in CI/CD pipelines (GitHub Actions), and improving overall
+software quality. Adept at managing end-to-end test lifecycles in fast-paced product teams
+and staying updated with modern testing tools and AI-integrated QA approaches.
