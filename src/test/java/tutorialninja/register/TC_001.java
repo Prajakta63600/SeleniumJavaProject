@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import utils.CommonUtils;
+
 public class TC_001 {
 	
     @Test
@@ -24,7 +26,7 @@ public class TC_001 {
 		
 		driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("Prajakta");
 		driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys("Naik");
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(generateEmail());
+		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(CommonUtils.generateEmail());
 		driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys("1234567890");
 		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("12345");
 		driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("12345");
@@ -57,11 +59,6 @@ public class TC_001 {
 
 	}
 	
-	public static String generateEmail()
-	{
 	
-		return new Date().toString().replaceAll("\\s", "").replaceAll("\\:", "")+"@gmail.com";
-
-	}
 
 }

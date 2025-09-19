@@ -21,21 +21,87 @@
   </dependencyManagement>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.34.0</version>
-</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.11.0</version>
-    <scope>test</scope>
-</dependency>
-  </dependencies>
+    <!-- ✅ Core Selenium bindings for Java 
+         - Required for WebDriver, ChromeDriver, etc. -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.26.0</version>
+    </dependency>
+
+    <!-- ✅ TestNG framework 
+         - Provides annotations (@Test, @BeforeMethod, etc.), assertions, reporting -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.11.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- ✅ Apache HttpClient 5 
+         - Needed internally by Selenium 4.34+ for HTTP requests -->
+    <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5</artifactId>
+        <version>5.3.1</version>
+    </dependency>
+
+    <!-- ✅ Apache HttpCore 5 
+         - Core networking library (dependency of HttpClient 5) -->
+    <dependency>
+        <groupId>org.apache.httpcomponents.core5</groupId>
+        <artifactId>httpcore5</artifactId>
+        <version>5.2.4</version>
+    </dependency>
+
+    <!-- ✅ Apache Commons Lang 
+         - Utility methods (StringUtils, RandomStringUtils, ObjectUtils, etc.) 
+         - Very handy in frameworks -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.14.0</version>
+    </dependency>
+
+    <!-- ✅ Brotli compression library 
+         - Required by newer Selenium versions (because Chrome uses Brotli for responses) -->
+    <dependency>
+        <groupId>com.nixxcode.jvmbrotli</groupId>
+        <artifactId>jvmbrotli</artifactId>
+        <version>0.2.0</version>
+    </dependency>
+
+    <!-- ✅ WebDriverManager by Boni García 
+         - Automatically downloads the correct browser driver (e.g., chromedriver.exe) 
+         - Removes need for manual System.setProperty -->
+  	
+  	 <dependency>
+     	 <groupId>io.github.bonigarcia</groupId>
+    	 <artifactId>webdrivermanager</artifactId>
+    	 <version>5.9.2</version>
+	</dependency>
+
+    <!-- ✅ Image Comparison library (romankh3) 
+         - Allows pixel-by-pixel comparison of screenshots 
+         - Useful for visual regression testing -->
+    <dependency>
+        <groupId>com.github.romankh3</groupId>
+        <artifactId>image-comparison</artifactId>
+        <version>4.4.0</version>
+    </dependency>
+
+    <!-- ✅ AShot library 
+         - Used for taking advanced screenshots (full page, elements, etc.) 
+         - Provides ImageDiff & ImageDiffer classes -->
+    <dependency>
+        <groupId>ru.yandex.qatools.ashot</groupId>
+        <artifactId>ashot</artifactId>
+        <version>1.5.4</version>
+    </dependency>
+
+</dependencies>
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import utils.CommonUtils;
+
 public class TC_005 {
 	
 	@Test
@@ -23,7 +25,7 @@ public class TC_005 {
 		driver.findElement(By.linkText("Register")).click();
 		driver.findElement(By.id("input-firstname")).sendKeys("Prajakta");
 		driver.findElement(By.id("input-lastname")).sendKeys("Naik");
-		driver.findElement(By.id("input-email")).sendKeys(generateEmailTimeStamp());
+		driver.findElement(By.id("input-email")).sendKeys(CommonUtils.generateEmail());
 		driver.findElement(By.id("input-telephone")).sendKeys("7789654321");
 		driver.findElement(By.id("input-password")).sendKeys("333@33");
 		driver.findElement(By.id("input-confirm")).sendKeys("333@33");
@@ -43,11 +45,6 @@ public class TC_005 {
 		
 		driver.quit();
 		
-	}
-	
-	public static String generateEmailTimeStamp()
-	{
-		return new Date().toString().replaceAll("\\s", "").replaceAll("\\:", "")+"@gmail.com";
 	}
 
 }
