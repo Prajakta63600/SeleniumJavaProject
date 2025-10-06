@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="tutorialninja.register.TC_001"/>
+      <class name="tutorialninja.register.TC_002"/>
+      <class name="tutorialninja.register.TF_003"/>
+      <class name="tutorialninja.register.TC_004"/>
+      <class name="tutorialninja.register.TC_005"/>
+      <class name="tutorialninja.register.TC_006"/>
+      <class name="tutorialninja.register.TC_007"/>
+      <class name="tutorialninja.register.TC_008"/>
+      <class name="tutorialninja.register.TC_009"/>
+      <class name="tutorialninja.register.TC_010"/>
+      <class name="tutorialninja.register.TC_011"/>
+      <class name="tutorialninja.register.TC_012"/>
+      <class name="tutorialninja.register.TC_013"/>
+      <class name="tutorialninja.register.Tc_014"/>
+      <class name="tutorialninja.register.TC_015"/>
+      <class name="tutorialninja.register.TC_016"/>
+      <class name="tutorialninja.register.TC_017"/>
+      <class name="tutorialninja.register.TC_018"/>
+      <class name="tutorialninja.register.TC_019"/>
+      <class name="tutorialninja.register.TC_020"/>
+      <class name="tutorialninja.register.TC_021"/>
+      <class name="tutorialninja.register.TC_022"/>
+      <class name="tutorialninja.register.TC_023"/>
+      <class name="tutorialninja.register.TC_024"/>
+      <class name="tutorialninja.register.TC_025"/>
+      <class name="tutorialninja.register.TC_026"/>
+      <class name="tutorialninja.register.TC_027"/> 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
