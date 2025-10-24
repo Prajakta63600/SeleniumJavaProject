@@ -17,13 +17,6 @@
           <include name="verifyInvalidTelephoneNumber"/>
         </methods>
       </class> <!-- tutorialninja.register.TC_011 -->
-      <class name="tutorialninja.register.TC_016">
-        <methods>
-          <include name="verifySpaceNotAllowedOnRegistedField"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tutorialninja.register.TC_016 -->
       <class name="tutorialninja.register.Tc_014">
         <methods>
           <include name="setUp"/>
@@ -31,6 +24,20 @@
           <include name="verifyRegisterPageFieldName"/>
         </methods>
       </class> <!-- tutorialninja.register.Tc_014 -->
+      <class name="tutorialninja.register.TC_015">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyDatabaseTestingOfRegisteringAccount"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tutorialninja.register.TC_015 -->
+      <class name="tutorialninja.register.TC_010">
+        <methods>
+          <include name="verifyEmailFieldWithDifferentData"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tutorialninja.register.TC_010 -->
       <class name="tutorialninja.register.TC_019">
         <methods>
           <include name="tearDown"/>

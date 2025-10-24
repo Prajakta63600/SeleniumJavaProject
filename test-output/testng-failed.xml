@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialninja.register.TC_001">
+      <class name="tutorialninja.tests.Login">
         <methods>
-          <include name="registerWithEmail"/>
           <include name="tearDown"/>
+          <include name="verifyLoginAttemptExceededWarningMsg"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tutorialninja.register.TC_001 -->
+      </class> <!-- tutorialninja.tests.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

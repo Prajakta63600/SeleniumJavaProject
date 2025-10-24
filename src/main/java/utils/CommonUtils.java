@@ -9,6 +9,11 @@ import java.util.Properties;
 
 import javax.imageio.ImageIO;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
+
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
@@ -52,6 +57,20 @@ public class CommonUtils {
 		}
 		
 		return prop;
+	}
+	
+	public static WebDriver takeScreenShots(WebDriver driver, String pathToBeCopied) {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File screenshots = ts.getScreenshotAs(OutputType.FILE);
+		try {
+			FileHandler.copy(screenshots,
+					new File(System.getProperty("user.dir") + "\\Screenshots\\FileAlignmentActual.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return driver;
 	}
 
 }
